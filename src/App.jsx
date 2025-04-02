@@ -1,6 +1,28 @@
-import "./App.css";
-export default function App() {
+import { Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout/Layout.jsx";
+import { Toaster } from "react-hot-toast";
+import { Suspense, lazy } from "react";
+
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const CatalogPage = lazy(() => import("./pages/CatalogPage/CatalogPage"));
+const CarDetailsPage = lazy(() =>
+  import("./pages/CarDetailsPage/CarDetailsPage")
+);
+const NotFoundPage = lazy(() => import("./pages/NotFoundPage/NotFoundPage"));
+function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-blue-500">Hello world!</h1>
+    <Layout>
+      <Suspense fallback={<div>Завантаження сторінки...</div>}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/catalog/:id" element={<CarDetailsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
+      <Toaster />
+    </Layout>
   );
 }
+
+export default App;
