@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import Layout from "./components/Layout/Layout.jsx";
+import Layout from "./components/Layout.jsx";
 import { Toaster } from "react-hot-toast";
 import { Suspense, lazy } from "react";
 
