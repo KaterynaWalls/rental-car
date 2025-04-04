@@ -1,0 +1,69 @@
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("../../assets/images/hero1x.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 700px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 440px;
+  align-items: center;
+  /* justify-content: end; */
+}
+
+@media only screen and (min-device-pixel-ratio: 2),
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi) {
+  .hero {
+    background: url("../../assets/images/hero2x.webp");
+  }
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.2;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+.subtitle {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 40px;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--button);
+  border-radius: 12px;
+  padding: 12px 99px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--white);
+  margin-bottom: 60px;
+}
+.button:hover,
+.button:focus {
+  background: var(--button-hover);
+}

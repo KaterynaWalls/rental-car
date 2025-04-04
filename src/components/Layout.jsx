@@ -1,12 +1,15 @@
 import { Suspense } from "react";
-import { Toaster } from "react-hot-toast";
+import { Outlet } from "react-router-dom";
+import Header from "./Header/Header";
 import Loader from "./Loader/Loader";
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
     <div>
-      <Toaster />
-      <Suspense fallback={<Loader />}>{children}</Suspense>
+      <Header />
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

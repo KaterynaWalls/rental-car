@@ -11,9 +11,8 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-
-import carsReducer from "./cars/carsSlice";
-import favoritesReducer from "./favorites/favoritesSlice";
+import carsReducer from "./cars/slice";
+import favoritesReducer from "./favorites/slice";
 import filtersReducer from "./filters/filtersSlice";
 
 const rootReducer = combineReducers({

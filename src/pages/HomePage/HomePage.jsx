@@ -1,7 +1,7 @@
-import React from "react";
+import Hero from "../../components/Hero/Hero.jsx";
 
-function HomePage() {
-  return <div></div>;
-}
+const HomePage = () => {
+  return <Hero />;
+};
 
 export default HomePage;
