@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 120px;
+  background-color: var(--badges);
+  border-bottom: 1px solid var(--badges);
+}
+
+.iconLogo {
+  width: 104px;
+  height: 16px;
+}
+
+.navList {
+  display: flex;
+  gap: 32px;
+}
+
+.navItem {
+  padding: 24px 0;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--main);
+  transition: color 0.3s ease;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--main);
+  padding: 24px 0;
+  display: inline-block;
+}
+
+.link:hover {
+  color: var(--button-hover);
+}
+
+.active {
+  color: var(--button-hover);
+}
